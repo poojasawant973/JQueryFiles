@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Small Gallary</title>
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css">
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
+
+	<style>
+		#thumb {
+			margin-top: 30px;
+		}
+		div img{
+			width: 700px;
+		}
+	</style>
+
+</head>
+<body>
+	<div class="container">
+		<div class="row">
+			<div class="col-md-6 mx-auto">
+				<img src="img/gallary1.jpg" class="img-fluid big-img">
+				<div class="row" id="thumb">
+					<div class="col-md-3"><img src="img/gallary1.jpg" class="img-fluid small-img"></div>
+
+					<div class="col-md-3"><img src="img/gallary2.jpg" class="img-fluid small-img"></div>
+
+					<div class="col-md-3"><img src="img/gallary3.jpg" class="img-fluid small-img"></div>
+
+					<div class="col-md-3"><img src="img/gallary4.jpg" class="img-fluid small-img"></div>
+				</div> <!-- we can add more img -->
+			</div>
+		</div>
+	</div>
+
+	<script>
+		$(document).ready(function(){
+			$(".small-img").on("click", function(){
+				let x = $(this).attr('src');
+				$(".big-img").attr('src',x);
+			})
+		})
+	</script>
+</body>
+</html>

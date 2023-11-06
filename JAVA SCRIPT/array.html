@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>array method</title>
+</head>
+<body>
+	<script>
+		/*two way to write array*/
+		/*let sname = ['sumit', 'amit', 'bablu', 'harsh', 'chootu','ram'];
+		document.write(sname); first way 
+		console.log(sname);*/
+
+
+		/*let sname = new Array();
+		sname [0] = 'sumit';
+		sname [1] = 'amit';
+		document.write(sname); second way
+		console.log(sname);*/
+
+		let sname = ['sumit', 'amit', 'bablu','harsh','ram','chotu','diksha','zebra'];
+		document.write(sname +"<br>");
+		sname.sort();  /*// use for sorting letter */
+		document.write(sname +"<br>");
+
+
+		let nums = [55,54,31,63,25,45];
+		document.write(nums +"<br>");
+		nums.sort();  /*// use for num sorting*/
+		document.write(nums +"<br>");
+
+		let numbers = [55,54,31,63,25,45];
+		document.write(numbers +"<br>");
+		numbers.reverse();  /*// use for num sorting*/
+		document.write(numbers +"<br>");
+
+
+		let numbs = [5,4,3,2,6,1];
+		document.write(numbs +"<br>");
+		numbs.push(12);  /*// use for insert element at the end of the array*/
+		document.write(numbs +"<br>");
+
+
+		let demo = [5,4,3,2,6,1,23,45];
+		document.write(demo +"<br>");
+		demo.pop();  /*// use for remove element at the end of the array and when we use */
+		demo.pop(); //23 and 45 will be remove
+		document.write(demo +"<br>"); /*//45 will be remove*/
+
+		let side = [5,4,3,2,6,1];
+		document.write(side +"<br>");
+		side.unshift(12);  /*// use for insert element at the starting of the array*/
+		document.write(side +"<br>"); // output will be 12,5,4,3,2,6,1
+
+
+		let abc = ['sumit', 'amit', 'bablu','harsh','ram','chotu','diksha','zebra'];
+		document.write(abc +"<br>");  
+		abc.unshift('Rahul');  
+		document.write(abc +"<br>");
+
+		let dside = [5,4,3,2,6,1];
+		document.write(dside +"<br>");
+		dside.shift();  /*// use for deletion element at the starting of the array*/  // output will be 4,3,2,6,1
+		dside.shift(); // output will be 3,2,6,1
+		document.write(dside +"<br>"); 
+
+
+
+		let num1 = [1,2,3,4];
+		let num2 = [5,6,7,8];       //this function use for merge array
+		let num3 = [9,10,11,12];
+
+		num2.unshift(25,50); //we add 25,50 at the end of the 2nd array .trick 1
+
+		let result = num1.concat(num2,25,50).concat(num3);  //trick 2
+
+
+		document.write(num1 + "<br>");     //firstly remember who is first and then who is ....
+		document.write(num2 + "<br>");
+		document.write(num3 + "<br>");
+		document.write(result + "<br>");  //overall result ke pass hai
+
+
+
+// 		let mango = ['amit','baba','chotu','prakash', 'rakesh', 'rajesh','ganesh'];
+// 		document.write(mango + "<br>");
+// 		let newarr = mango.slice(2,4); //2nd and 3rd element milega
+// /*		syntax of slice(begindex , endindex)
+// */		document.write(newarr + "<br>");
+
+	//slice use for which element want delete from indexing
+
+
+			// splice use for add element and delete then add element
+
+		let mango = ['amit','baba','chotu','prakash', 'rakesh', 'rajesh','ganesh'];
+		document.write(mango + "<br>");
+		mango.splice(2,0,'pinky','chinky'); //2nd and 3rd element milega
+		// syntax of slice(begindex , endindex)
+		document.write(mango + "<br>");
+		// agar delete krrna ho element to unmutable bnaye means need to store variable and value is 0 dena
+
+
+		let fruits = ['mango', 'banana', 'watermelon','papaya', 'orange'];
+		for(let i=0;i<fruits.length;i++)    //use for print out put ek ke niche ek using  for loop 1st method
+		{
+			document.write(fruits[i] + "<br>");
+		}
+
+
+		let pname = ['mango', 'banana', 'watermelon','papaya', 'orange','lotus'];
+		
+		pname.forEach(dmt)
+		function dmt(item) //use for print out put ek ke niche ek using  for loop 2nd method
+		{
+			document.write(item + "<br>");
+		}
+
+
+		let num = [2,3,4,5,6,7,9];
+		num.forEach(rani);  
+		function rani(item)
+		{
+			document.write(item*10 +"<br>");
+		}
+
+		let arr = [5,6,67,102,34,12,57,73,11,9,7,5];
+		// let relt = arr.filter(pooja);
+		// function pooja(item)
+		// {
+		// 	return item>20;   //it use like if else greater than 20 num will be print 1st method
+		// }
+		// document.write(relt);
+
+		let relt = arr.filter((item)=> item>20);
+		document.write(relt);  //this is 2nd short hand method
+
+
+
+
+
+
+
+		
+
+
+
+
+
+
+
+
+
+		
+
+
+
+
+
+
+
+
+	</script>
+
+</body>
+</html>

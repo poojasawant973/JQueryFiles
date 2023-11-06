@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Preview</title>
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css">
+	<script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
+
+</head>
+<body>
+	<div class="container">
+		<div class="row">
+			<div class="col-md-4 mx-auto">
+				<figure>
+					<img src="img/passport1.jpg" class="img-fluid" id="preview" width="100px" height="100px">
+					<fingcaption>
+						<input type="file" id="fileupload">
+					</fingcaption>
+				</figure>
+			</div>
+		</div>
+	</div>
+
+	<script>
+		$(document).ready(function(){
+			$("#fileupload").change(function(event){
+				let x = URL.createObjectURL(event.target.files[0]);
+
+				$("#preview").attr('src', x);
+			})
+		})
+	</script>
+
+</body>
+</html>

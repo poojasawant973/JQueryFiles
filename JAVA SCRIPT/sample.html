@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+</head>
+<body>
+	<script>
+		/*var a = 5;
+		var b = 10;
+		var a = 20; // can be redeclaired , can be reinitilized
+		console.log(a+b);*/
+
+/*		we can write function in 3 way 
+
+*/		/*function sum(x, y)
+		{
+			console.log(x+y);
+		}
+		sum(1,2);
+		sum(2,3);  //first way
+		sum(3,4);
+		sum(4,5);
+*/
+		/*let sum = function(x,y)
+		{
+			return x+y;            // second way 
+		}
+		console.log(sum(9,8))      // output is 17
+*/
+
+		/*let sum = (x,y) => x+y;
+
+		console.log(sum(25,8))    // third way
+*/
+
+		let student = {
+			name: "Amit",
+			roll : 50,
+			college : "Sipna",
+			age : 22,
+			display :function() {
+				console.log("Name of Student = " +this.name+ " and Roll Number = " +this.roll+ "Age of Student = " +this.age);
+/*				this is first way
+*/
+
+				console.log(`Name of Student = ${this.name}, Roll Number = ${this.roll} and age of student = ${this.age}`);
+/*			this is second way
+*/			}
+		}
+
+		console.log(student.name);
+		console.log(student.roll);
+		console.log(student.college);
+		console.log(student.age);
+		console.log(student.display());
+
+
+
+	</script>
+
+</body>
+</html>

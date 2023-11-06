@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Password validation</title>
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+	<script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
+	<style>
+		.form-control:focus {
+			color: #495057;
+  background-color: #fff;
+  border-color: black;
+  outline: 0;
+  box-shadow: none;
+		}
+	</style>
+
+</head>
+<body>
+
+<div class="container">
+	<div class="row">
+		<div class="col-md-6 mx-auto">
+<form>
+  <div class="form-group">
+    <label>Email address</label>
+    <input type="email" class="form-control" id="email" placeholder="Enter email">
+    <p id="eidtext"></p>
+  </div>
+
+
+  <div class="form-group">
+    <label>Password</label>
+    <input type="password" class="form-control" id="password" placeholder="Enter Password">
+    <p id="pwdtext"></p>
+  </div>
+
+  <div class="form-group">
+    <label>Mobile</label>
+    <input type="tel" class="form-control" id="mobile" placeholder="Enter Mobile-Number">
+    <p id="mbtext"></p>
+  </div>
+
+  <div class="form-group">
+  	<label>Aadhar Card </label>
+  	<input type="text" class="form-control" id="adharCard" placeholder="Enter Aadhar-card number">
+  	<p id="actext"></p>
+  </div>
+
+  <div class="form-group form-check">
+  </div>
+  <button type="submit" class="btn btn-primary">Submit</button>
+</form>
+</div>
+</div>
+</div>
+
+<script>
+	$(document).ready(function(){
+
+		$("#password").keyup(function(){
+
+			if(checkpassword())
+			{
+				$("#password").css("border", "5px solid green");
+				$("#pwdtext").html("<font color='green'> Password Validated </font>")
+			}	
+			else
+			{
+				$("#password").css("border", "2px solid red");
+					$("#pwdtext").html("<font color='red'> Password Invalid </font>")
+
+			}
+		})
+
+		$("#email").keyup(function(){
+
+			if(checkemail())
+			{
+				$("#email").css("border", "2px solid green");
+				$("#eidtext").html("<font color='green'>E-mail validated</font>")
+			}
+			else
+			{
+				$("#email").css("border", "2px solid red");
+				$("#eidtext").html("<font color='red'>E-mail Not validated</font>")
+			}
+		})
+
+		$("#mobile").keyup(function(){
+
+			if(checknumber())
+			{
+				$("#mobile").css("border", "2px solid green");
+				$("#mbtext").html("<font color='green'> Mobile number validated</font>")
+			}
+			else
+			{
+				$("#mobile").css("border", "2px solid red");
+				$("#mbtext").html("<font color='red'>Mobile number not valided</font>")
+			}
+		})
+
+		$("#adharCard").keyup(function(){
+
+			if(checkadhar())
+			{
+				$("#adharCard").css("border", "2px solid green");
+				$("#actext").html("<font color='green'> Adhar-card validated</font>")
+			}
+			else
+			{
+				$("#adharCard").css("border", "2px solid red");
+				$("#actext").html("<font color='red'>Adhar number not validated</font>")
+			}
+
+		})
+
+
+	})
+
+
+
+	function checkpassword()
+	{
+		let pattern = /^(?=.*\d)(?=.*[!@#$%^&*])(?=.*[a-z])(?=.*[A-Z]).{6,12}$/
+
+		let data = $("#password").val();
+
+		if(pattern.test(data))
+		{
+			return true;
+		}
+		else
+		{
+			return false;
+		}	
+
+	}
+
+
+
+	function checkemail()
+	{
+		let epattern = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
+
+		let eid = $("#email").val();
+
+		if(epattern.test(eid))
+		{
+			return true;
+		}
+		else
+		{
+			return false;
+		}
+	}
+
+	function checknumber()
+	{
+		let mpattern = /^\d{12}$/;
+
+
+		let mbNum = $("#mobile").val();
+
+		if(mpattern.test(mbNum))
+		{
+			return true;
+		}
+		else
+		{
+			return false;
+		}
+	}
+
+	function checkadhar()
+	{
+		let acpattern = /^\d{12}$/;
+
+		let adharNum = $("#adharCard").val();
+
+		if(acpattern.test(adharNum))
+		{
+			return true;
+		}
+		else
+		{
+			return false;
+		}
+	}
+
+
+
+
+
+</script>
+
+</body>
+</html>

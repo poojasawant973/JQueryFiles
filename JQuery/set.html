@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Set</title>
+	<script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
+
+</head>
+<body>
+	<h1> Heading </h1>
+	<p> </p>
+
+	<input type="email"><br><br>
+	<input type="text"><br><br>
+	<button>Click</button>
+
+	<script>
+		$(document).ready(function(){
+
+			$("button").click(function(){
+				/*let data = "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmodtempor incididunt ut labore et dolo essecillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupida";*/
+				/*$("h1").html("<font color='red'> <i>sample project </i> </font>");*/
+				/*when here we use text all including tag will be display*/
+				$("input[type='email']").val("sanjay kapur");
+
+			})
+		})
+	</script>
+
+</body>
+</html>

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>parent, children , siblings</title>
+	<script src="https://code.jquery.com/jquery-1.12.4.js" integrity="sha256-Qw82+bXyGq6MydymqBxNPYTaUXXq7c8v3CwiYwLLNXU=" crossorigin="anonymous"></script>
+
+	<style>
+		#mainouter {
+			width: 800px;
+			height: 700px;
+			border: 2px solid black;
+			padding-left: 20px;
+			background-color: pink;
+		}
+
+		#outer {
+			width: 700px;
+			height: 600px;
+			border: 2px solid black;
+			padding-left: 20px;
+			background-color: orange;
+		}
+
+		#inner {
+			width: 600px;
+			height: 500px;
+			border: 2px solid black;
+			padding-left: 20px;
+			background-color: lightgreen;
+		}
+
+		#inner div {
+			width: 100px;
+			height: 100px;
+			border: 2px solid black;
+			display: inline-block; 
+			padding-left: 20px;
+			background-color: #fff;
+
+			/*bcz jb hm width ke sath display i-b use krte hai to wo apply nhi hota*/
+		}
+	</style>
+</head>
+<body>
+<div id="mainouter">
+	<h2>Main Outer</h2>
+	<div id="outer">
+		<h2>Outer</h2>
+		<div id="inner">
+			<h2>Inner</h2>
+			<div> </div>
+			<div> </div>
+			<div id="tbox"> </div>			
+		</div>
+	</div>	
+</div>
+
+<script>
+	$(document).ready(function(){
+		$('#tbox').parents('#mainouter, #inner').css('background-color','skyblue');
+	})
+</script>
+</body>
+</html>

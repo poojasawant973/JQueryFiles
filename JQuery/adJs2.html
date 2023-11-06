@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // fetch('abc.txt').then((resp)=>{
+        //     return resp.text();
+        // }).then((data)=>{
+        //     console.log(data);
+        // })
+
+        // promises is a big code but using async and await is complixity of code 
+        
+        //   async function demo()
+        //   {
+        //     let resp = await fetch('abc.txt');
+        //     let data = await resp.text();
+        //     console.log(data);
+        //   }  
+        //   demo();
+
+          async function demo()
+          {
+            let resp = await fetch('https://jsonplaceholder.typicode.com/users')
+            let data = await resp.json();
+            for(let x in data)
+            {
+            console.log(`${data[x].name} - ${data[x].address.city}`);
+            }
+            
+        }
+
+        demo();
+
+    </script>   
+</body>
+</html>

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>advanceJs</title>
+</head>
+<body>
+
+	<script>
+		/*this is the rest operator ex*/
+		/*let sum = (city,...args) => {
+			let s = 0;
+			for(let i in args)
+			{
+				s = s + args[i];
+			}
+			console.log(s);
+			console.log(city);
+		}
+		sum("amravati", 6,8,9,12,15,18);*/
+
+
+
+
+		/*spread opeator ex*/
+		/*let sum = (args) => {
+			args[2] = 50;
+			console.log(args);
+		}
+		let arr = [5,10,15,20,25];
+		sum(arr);
+		console.log(arr);*/
+
+
+
+		/*object make and templete string*/
+
+		const student = {
+			name : "Akshay",
+			city : "Pune",
+			age : 19,
+			address : {pin : 444701, street : "camp"},
+			display : function(){
+				console.log("Name = "+this.name+ ", Age = "+this.age+" and City = "+this.city);
+				/*this is first way*/
+
+				console.log(`Name = ${this.name}, Age = ${this.age} and City = ${this.city}`);
+				/*this is templete string way*/
+			}
+		} 
+		console.log(student.display());
+	</script>
+
+</body>
+</html>

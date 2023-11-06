@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Array method part 2</title>
+</head>
+<body>
+
+	<script>
+		// includes function use in string 
+
+		let str = 'JavaScript is one of the most important language';
+		document.write(str + "<br>")
+		let result= str.includes('one');
+		document.write(result + "<br>");
+
+
+		//includes function use in array
+
+		let strg = ['one','two', 'three', 'four'];
+		document.write(strg + "<br>");
+		let result1 = strg.includes('ree');  //capital small remember in this function if 'One' output false
+		document.write(result1 +"<br>");
+
+		//in file handling code we want only jpg, png, bmp extension ki hi image chahiye to hum use kr skte hai
+
+		// let extension = ['jpg', 'png', 'bmp'];
+		// document.write(extension + "<br>");
+		// let result = extension.includes('jpg');
+		// document.write(result);
+		// if(result)
+		// {
+		// 	upload
+		// }
+		// else
+		// {
+		// 	 not uploaded
+		// }
+
+		let array = [10,20,12,25,56,29];
+		let results = array.find(dept)
+		function dept(item)
+		{
+			return item>18;
+		}
+		document.write(results +"<br>");
+
+
+		let a = 15;
+		let b = 30;
+		let c = a.toString();
+		let d = b.toString();
+		document.write(c+d +"<br>");
+		document.write(a+b +"<br>");
+
+
+
+	// *****String method in js 
+
+		/*1 length() in js*/
+
+		let strings1 = 'javaScript is one of the popular language';
+		let strings2 = 'Welcome';
+		document.write(strings1.length + "<br>");
+
+
+		/*2. replace() in js*/
+
+		let strng = 'JavaScript is language of web-development';
+		document.write(strng + "<br>");
+		let resultst = strng.replace('JavaScript', 'PHP');
+		document.write(resultst + "<br>");
+
+		/*3. toLowerCase() in js*/
+
+		let letter = 'HELLO WORLD';
+		document.write(letter + "<br>");
+		let resultl = letter.toLowerCase()
+		document.write(resultl + "<br>");
+
+		/*4. toUpperCase() in js*/
+
+		let letter1 = 'navgurukul amravati';
+		document.write(letter1 +"<br>");
+		let result2 = letter1.toUpperCase()
+		document.write(result2 + "<br>");
+
+
+		/*5. includes() in js*/
+
+		let letter2 = 'navgurukul at amravati';
+		document.write(letter2 +"<br>");
+		let result3 = letter2.includes('at')
+		document.write(result3 + "<br>");
+
+		/*6. startsWith() in js*/
+
+		let letter3 = 'India is a country';
+		document.write(letter3 +"<br>");
+		let result4 = letter3.startsWith('India')
+		document.write(result4 + "<br>");		
+		  
+		  /*output is true*/
+
+/*		7. endwith() in js 
+*/
+		let textp = "Hello world";
+		document.write(textp +"<br>");
+		let result8 = textp.endsWith('hello');  //false
+		document.write(result8 +"<br>");
+
+
+		/*8. search() in js*/
+
+		let tests = "navgurukul has total seven campus";
+		document.write(tests + "<br>");
+		let resultss = tests.search('has');  //index 11
+		document.write(resultss +"<br>");
+
+		/*9. split() in js */
+
+		let texts = "Shivaji maharaj is a king of maratha kingdom";
+		document.write(texts + "<br>");
+		let resultsp = texts.split(" ");  //seperate with comma
+		document.write(resultsp +"<br>");
+
+		/*10. trim() in js*/
+
+		let mat = "        Shivaji maharaj is a king of maratha kingdom         ";
+		console.log(mat + "<br>");
+		let resultmg = mat.trim();  //seperate with comma 
+		console.log(resultmg +"<br>"); 
+
+		/*11, padEnd() in js*/
+
+		let numb = 5;
+		document.write(numb + "<br>");
+		let padded = numb.padEnd(4,"0");  
+		document.write(padded +"<br>"); 
+
+
+
+
+
+
+
+	</script>
+
+</body>
+</html>

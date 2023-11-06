@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>On method</title>
+		<script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
+		<style type="text/css">
+			div {
+				width: 200px;
+				height: 200px;
+				border: 2px solid black;
+				background-color: whitesmoke;
+			}
+			
+		</style>
+</head>
+<body>
+	<div id="box">
+		
+	</div>
+
+	<script>
+		$(document).ready(function(){
+			/*$("#box").click(function(){
+				$(this).css('background-color', 'red');
+			})
+			$("#box").dblclick(function(){
+				$(this).css('background-color', 'green');
+			})
+			$("#box").mouseenter(function(){
+				$(this).css('background-color', 'yellow');
+			})*/  /*no need of ths code*/ 
+
+			$("#box").on({
+
+				"click" : function(){
+					$(this).css('background-color', 'red');
+				},
+				"dblclick" : function(){
+					$(this).css('background-color', 'green');
+				},
+				"mouseenter" : function(){
+					$(this).css('background-color', 'yellow');
+				}
+			})
+
+			$("#box").off('mouseenter dblclick');
+			// mouseenter and dblclick disable 
+
+
+			
+
+
+		})
+	</script>
+
+</body>
+</html>

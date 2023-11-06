@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>JQuery intro</title>  <!-- 1st way -->
+	<!-- <script
+ 	 src="https://code.jquery.com/jquery-3.7.1.min.js"
+  	integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="     
+  	crossorigin="anonymous"></script> -->  <!-- 2nd way -->
+  	<script src="jquery.js"></script>
+  	<style>
+  		div{
+  			width: 200px;
+  			height: 200px;
+  			background-color: red;
+  		}
+  		
+  	</style>
+</head>
+<body>
+	<div id="box">
+		
+	</div>
+	<!-- <h1> Code from html </h1> -->
+	<script>
+			/*alert("Hello from JQuery");*/	
+		/*$(document).ready(function(){
+		$("#box").click(function(){
+			$("box").css("background-color","yellow");
+		})*/
+		
+		$(document).ready(function(){
+			let a = 20;
+
+			$("#box").mouseenter(function(){
+				$("body").css("background-color","yellow");
+			})
+
+			$("#box").mouseleave(function(){
+				$("body").css("background-color","white");
+				$("#box").css("background-color", "green");
+				if(a>18)
+				{
+					alert('Congrate you complete your task');
+				}
+			})
+		})
+		
+	</script>
+
+</body>
+</html>
